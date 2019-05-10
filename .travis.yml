@@ -1,0 +1,19 @@
+dist: xenial
+addons:
+  apt:
+    packages:
+      - libyaml-dev
+
+branches:
+  only:
+  - master
+
+language: c
+
+compiler: gcc
+
+install:
+  - make -C hello/ clean all
+
+script:
+  - ./hello/hello
